@@ -16,125 +16,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-        color: #4a4a4a; /* Dark grey for body text */
-      }
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Playfair Display", serif;
-        color: #6c5b7b; /* Deep lavender/plum for headings */
-      }
-      /* Custom scrollbar for a touch of elegance */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #f1f1f1;
-        border-radius: 10px;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #f9ebea; /* Soft pink */
-        border-radius: 10px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #f2dcda; /* Slightly darker pink */
-      }
-
-      /* Hero section background image with overlay */
-      .hero-section {
-        /* Using the uploaded image for the background */
-        background-image: url("image_1d3afd.png");
-        background-size: cover;
-        background-position: center;
-        position: relative;
-      }
-      .hero-overlay {
-        /* Adjusted overlay for better readability over the new image */
-        background: linear-gradient(
-          to right,
-          rgba(255, 255, 255, 0.8) 0%, /* More opaque white */
-          rgba(255, 255, 255, 0.5) 100%
-        ); /* Soft white gradient overlay */
-      }
-      /* Testimonial card hover effect */
-      .testimonial-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      }
-      /* Button hover effects */
-      .btn-primary:hover {
-        background-color: #f9ebea; /* Soft pink */
-        color: #6c5b7b; /* Darker text */
-        box-shadow: 0 4px 12px rgba(108, 91, 123, 0.2);
-      }
-      .btn-secondary:hover {
-        background-color: #6c5b7b; /* Darker */
-        color: #fff;
-        box-shadow: 0 4px 12px rgba(108, 91, 123, 0.2);
-      }
-
-      /* Animations for hero section elements */
-      @keyframes fadeInDown {
-        from {
-          opacity: 0;
-          transform: translateY(-20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      @keyframes bounceIn {
-        0% {
-          transform: scale(0.3);
-          opacity: 0;
-        }
-        50% {
-          transform: scale(1.05);
-          opacity: 1;
-        }
-        70% {
-          transform: scale(0.9);
-        }
-        100% {
-          transform: scale(1);
-        }
-      }
-
-      .animate-fade-in-down {
-        animation: fadeInDown 1s ease-out forwards;
-      }
-
-      .animate-fade-in-up {
-        animation: fadeInUp 1s ease-out forwards;
-      }
-
-      .animate-bounce-in {
-        animation: bounceIn 0.8s ease-out forwards;
-      }
-
-      .animate-bounce-in.delay-100 {
-        animation-delay: 0.1s;
-      }
-    </style>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="static/styles.css" />
   </head>
   <body class="bg-gradient-to-br from-purple-50 via-pink-50 to-white">
     <!-- Header / Navigation -->
@@ -346,7 +229,7 @@
         </div>
       </section>
 
-      <!-- Services Section -->
+      <!-- Services Section (Content would typically be loaded from sections/services.html) -->
       <section
         id="services"
         class="py-20 bg-white rounded-lg shadow-inner mx-auto max-w-7xl my-16 px-6"
@@ -484,7 +367,7 @@
         </div>
       </section>
 
-      <!-- Testimonials Section -->
+      <!-- Testimonials Section (Content would typically be loaded from sections/testimonials.html) -->
       <section
         id="testimonials"
         class="py-20 bg-F9EBEA mx-auto max-w-7xl my-16 rounded-lg shadow-inner px-6"
@@ -497,7 +380,6 @@
             Hear from the girls who love their Glow & Bloom experience!
           </p>
 
-          <!-- Testimonial Grid - Replaced Carousel -->
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Testimonial Item 1 -->
             <div
@@ -576,7 +458,7 @@
         </div>
       </section>
 
-      <!-- Why Choose Us Section -->
+      <!-- Why Choose Us Section (Content would typically be loaded from sections/why_choose_us.html) -->
       <section
         id="why-choose-us"
         class="py-20 bg-white mx-auto max-w-7xl my-16 rounded-lg shadow-inner px-6"
@@ -648,11 +530,11 @@
         </div>
       </section>
 
-      <!-- Call to Action Banner -->
+      <!-- Call to Action Banner & Footer (Content would typically be loaded from sections/contact.html) -->
       <section
         class="bg-6C5B7B text-white py-16 mx-auto max-w-7xl my-16 rounded-lg shadow-xl text-center px-6"
       >
-        <h2 class="text-4xl font-bold mb-6">Ready to Glow?</h2>
+        <h2 class="text-4xl font-bold mb-6 text-gray-700">Ready to Glow?</h2>
         <p class="text-xl mb-10 max-w-3xl mx-auto text-gray-700">
           Book your appointment today and embark on your journey to ultimate
           beauty and relaxation.
@@ -746,28 +628,7 @@
       </div>
     </footer>
 
-    <script>
-      // Mobile Menu Toggle
-      const mobileMenuButton = document.getElementById("mobile-menu-button");
-      const mobileMenu = document.getElementById("mobile-menu");
-      const mobileServicesToggle = document.getElementById(
-        "mobile-services-toggle"
-      );
-      const mobileServicesMenu = document.getElementById(
-        "mobile-services-menu"
-      );
-
-      if (mobileMenuButton) {
-        mobileMenuButton.addEventListener("click", () => {
-          mobileMenu.classList.toggle("hidden");
-        });
-      }
-
-      if (mobileServicesToggle) {
-        mobileServicesToggle.addEventListener("click", () => {
-          mobileServicesMenu.classList.toggle("hidden");
-        });
-      }
-    </script>
+    <!-- Link to external JavaScript file -->
+    <script src="static/script.js"></script>
   </body>
 </html>

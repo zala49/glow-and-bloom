@@ -1,0 +1,129 @@
+/* Custom styles for Glow & Bloom website */
+
+body {
+    font-family: "Inter", sans-serif;
+    color: #4a4a4a; /* Dark grey for body text */
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display", serif;
+    color: #6c5b7b; /* Deep lavender/plum for headings */
+  }
+  
+  /* Custom scrollbar for a touch of elegance */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #f9ebea; /* Soft pink */
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #f2dcda; /* Slightly darker pink */
+  }
+  
+  /* Hero section background image with overlay */
+  .hero-section {
+    /* Using the uploaded image for the background */
+    background-image: url("../image_1d3afd.png"); /* Updated path for static folder structure */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .hero-overlay {
+    /* Adjusted overlay for better readability over the new image */
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.8) 0%, /* More opaque white */
+      rgba(255, 255, 255, 0.5) 100%
+    ); /* Soft white gradient overlay */
+  }
+  
+  /* Testimonial card hover effect */
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Button hover effects */
+  .btn-primary:hover {
+    background-color: #f9ebea; /* Soft pink */
+    color: #6c5b7b; /* Darker text */
+    box-shadow: 0 4px 12px rgba(108, 91, 123, 0.2);
+  }
+  
+  .btn-secondary:hover {
+    background-color: #6c5b7b; /* Darker */
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(108, 91, 123, 0.2);
+  }
+  
+  /* Animations for hero section elements */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0.3);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+    70% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .animate-fade-in-down {
+    animation: fadeInDown 1s ease-out forwards;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  .animate-bounce-in {
+    animation: bounceIn 0.8s ease-out forwards;
+  }
+  
+  .animate-bounce-in.delay-100 {
+    animation-delay: 0.1s;
+  }
+  
