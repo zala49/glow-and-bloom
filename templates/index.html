@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glow & Bloom - Your Beauty Sanctuary</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter for body, Playfair Display for headings (elegant script feel) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        color: #4a4a4a; /* Dark grey for body text */
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Playfair Display", serif;
+        color: #6c5b7b; /* Deep lavender/plum for headings */
+      }
+      /* Custom scrollbar for a touch of elegance */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #f9ebea; /* Soft pink */
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #f2dcda; /* Slightly darker pink */
+      }
+
+      /* Hero section background image with overlay */
+      .hero-section {
+        /* Using the uploaded image for the background */
+        background-image: url("image_1d3afd.png");
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+      .hero-overlay {
+        /* Adjusted overlay for better readability over the new image */
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0.8) 0%, /* More opaque white */
+          rgba(255, 255, 255, 0.5) 100%
+        ); /* Soft white gradient overlay */
+      }
+      /* Testimonial card hover effect */
+      .testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+      /* Button hover effects */
+      .btn-primary:hover {
+        background-color: #f9ebea; /* Soft pink */
+        color: #6c5b7b; /* Darker text */
+        box-shadow: 0 4px 12px rgba(108, 91, 123, 0.2);
+      }
+      .btn-secondary:hover {
+        background-color: #6c5b7b; /* Darker */
+        color: #fff;
+        box-shadow: 0 4px 12px rgba(108, 91, 123, 0.2);
+      }
+
+      /* Animations for hero section elements */
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes bounceIn {
+        0% {
+          transform: scale(0.3);
+          opacity: 0;
+        }
+        50% {
+          transform: scale(1.05);
+          opacity: 1;
+        }
+        70% {
+          transform: scale(0.9);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .animate-fade-in-down {
+        animation: fadeInDown 1s ease-out forwards;
+      }
+
+      .animate-fade-in-up {
+        animation: fadeInUp 1s ease-out forwards;
+      }
+
+      .animate-bounce-in {
+        animation: bounceIn 0.8s ease-out forwards;
+      }
+
+      .animate-bounce-in.delay-100 {
+        animation-delay: 0.1s;
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-br from-purple-50 via-pink-50 to-white">
+    <!-- Header / Navigation -->
+    <header
+      class="bg-white shadow-sm py-4 sticky top-0 z-50 rounded-b-lg mx-auto max-w-7xl mt-4"
+    >
+      <nav class="container mx-auto px-6 flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <i class="fas fa-gem text-pink-400 text-3xl"></i>
+          <a href="#" class="text-3xl font-bold text-6C5B7B">Glow & Bloom</a>
+        </div>
+
+        <!-- Nav Links (Hidden on small screens, shown on medium and larger) -->
+        <ul class="hidden md:flex space-x-8 text-lg font-medium">
+          <li>
+            <a
+              href="#"
+              class="text-gray-700 hover:text-pink-400 transition duration-300"
+              >Home</a
+            >
+          </li>
+          <li class="relative group">
+            <a
+              href="#"
+              class="text-gray-700 hover:text-pink-400 transition duration-300"
+              >Services <i class="fas fa-chevron-down text-sm ml-1"></i
+            ></a>
+            <ul
+              class="absolute hidden group-hover:block bg-white shadow-lg py-2 px-4 rounded-lg mt-2 w-48 text-base"
+            >
+              <li>
+                <a href="#" class="block py-2 hover:text-pink-400">Hair Care</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 hover:text-pink-400">Nail Art</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 hover:text-pink-400"
+                  >Skincare & Facials</a
+                >
+              </li>
+              <li>
+                <a href="#" class="block py-2 hover:text-pink-400">Makeup</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 hover:text-pink-400"
+                  >Spa & Relaxation</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-700 hover:text-pink-400 transition duration-300"
+              >Gallery</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-700 hover:text-pink-400 transition duration-300"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-700 hover:text-pink-400 transition duration-300"
+              >Contact</a
+            >
+          </li>
+        </ul>
+
+        <!-- Book Now Button -->
+        <a
+          href="#"
+          class="btn-primary bg-pink-400 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-pink-500 transition duration-300 transform hover:scale-105 hidden md:block"
+        >
+          Book Now
+        </a>
+
+        <!-- Mobile Menu Toggle (Hamburger Icon) -->
+        <button
+          id="mobile-menu-button"
+          class="md:hidden text-gray-700 focus:outline-none"
+        >
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </nav>
+
+      <!-- Mobile Menu (Hidden by default) -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white mt-4 mx-6 rounded-lg shadow-lg py-4"
+      >
+        <ul class="flex flex-col items-center space-y-4 text-lg">
+          <li>
+            <a
+              href="#"
+              class="text-gray-700 hover:text-pink-400 transition duration-300"
+              >Home</a
+            >
+          </li>
+          <li class="w-full text-center">
+            <button
+              class="text-gray-700 hover:text-pink-400 transition duration-300 w-full py-2"
+              id="mobile-services-toggle"
+            >
+              Services <i class="fas fa-chevron-down text-sm ml-1"></i>
+            </button>
+            <ul
+              id="mobile-services-menu"
+              class="hidden bg-gray-50 mt-2 py-2 rounded-lg text-base"
+            >
+              <li>
+                <a href="#" class="block py-2 hover:text-pink-400">Hair Care</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 hover:text-pink-400">Nail Art</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 hover:text-pink-400"
+                  >Skincare & Facials</a
+                >
+              </li>
+              <li>
+                <a href="#" class="block py-2 hover:text-pink-400">Makeup</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 hover:text-pink-400"
+                  >Spa & Relaxation</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-700 hover:text-pink-400 transition duration-300"
+              >Gallery</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-700 hover:text-pink-400 transition duration-300"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-700 hover:text-pink-400 transition duration-300"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="btn-primary bg-pink-400 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-pink-500 transition duration-300"
+            >
+              Book Now
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="hero-section h-screen flex items-center justify-center text-center p-4"
+      >
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="relative z-10 max-w-4xl px-4">
+          <h1
+            class="text-5xl md:text-7xl font-extrabold leading-tight text-6C5B7B mb-6 animate-fade-in-down"
+          >
+            <span class="block">Unleash Your Inner Radiance</span>
+            <span class="block text-pink-400 text-4xl md:text-6xl mt-2 italic"
+              >At Glow & Bloom</span
+            >
+          </h1>
+          <p
+            class="text-xl md:text-2xl text-gray-800 mb-10 leading-relaxed animate-fade-in-up"
+          >
+            Discover a world of beauty, relaxation, and personalized care
+            designed just for you.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6"
+          >
+            <a
+              href="#"
+              class="btn-primary bg-pink-400 text-white px-8 py-4 rounded-full text-xl font-bold shadow-xl hover:bg-pink-500 transition duration-300 transform hover:scale-105 animate-bounce-in"
+            >
+              Book Your Appointment
+            </a>
+            <a
+              href="#"
+              class="btn-secondary bg-transparent border-2 border-6C5B7B text-6C5B7B px-8 py-4 rounded-full text-xl font-bold shadow-md hover:bg-6C5B7B hover:text-white transition duration-300 transform hover:scale-105 animate-bounce-in delay-100"
+            >
+              View Our Services
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section
+        class="py-20 bg-white rounded-lg shadow-inner mx-auto max-w-7xl my-16 px-6"
+      >
+        <div class="container mx-auto text-center">
+          <h2 class="text-4xl font-bold mb-4 text-6C5B7B">
+            Our Signature Services
+          </h2>
+          <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+            Indulge in a range of premium beauty treatments tailored to make you
+            feel pampered, confident, and utterly beautiful.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service Card 1: Hair Care -->
+            <div
+              class="bg-pink-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2"
+            >
+              <i class="fas fa-cut text-pink-400 text-5xl mb-6"></i>
+              <h3 class="text-2xl font-semibold mb-3 text-6C5B7B">
+                Hair Care & Styling
+              </h3>
+              <p class="text-gray-700 leading-relaxed mb-6">
+                From trendy cuts to vibrant colors and luxurious treatments, our
+                stylists will give your hair the love it deserves.
+              </p>
+              <a
+                href="#"
+                class="text-pink-400 font-medium hover:underline flex items-center justify-center"
+              >
+                Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+              </a>
+            </div>
+
+            <!-- Service Card 2: Nail Art -->
+            <div
+              class="bg-purple-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2"
+            >
+              <i class="fas fa-hand-sparkles text-purple-400 text-5xl mb-6"></i>
+              <h3 class="text-2xl font-semibold mb-3 text-6C5B7B">
+                Manicures & Pedicures
+              </h3>
+              <p class="text-gray-700 leading-relaxed mb-6">
+                Express your style with stunning nail art, relaxing spa
+                pedicures, and flawless manicures.
+              </p>
+              <a
+                href="#"
+                class="text-purple-400 font-medium hover:underline flex items-center justify-center"
+              >
+                Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+              </a>
+            </div>
+
+            <!-- Service Card 3: Skincare -->
+            <div
+              class="bg-green-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2"
+            >
+              <i class="fas fa-spa text-green-400 text-5xl mb-6"></i>
+              <h3 class="text-2xl font-semibold mb-3 text-6C5B7B">
+                Skincare & Facials
+              </h3>
+              <p class="text-gray-700 leading-relaxed mb-6">
+                Rejuvenate your skin with our personalized facials and advanced
+                skincare treatments for a radiant glow.
+              </p>
+              <a
+                href="#"
+                class="text-green-400 font-medium hover:underline flex items-center justify-center"
+              >
+                Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+              </a>
+            </div>
+
+            <!-- Service Card 4: Makeup -->
+            <div
+              class="bg-yellow-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2"
+            >
+              <i class="fas fa-brush text-yellow-400 text-5xl mb-6"></i>
+              <h3 class="text-2xl font-semibold mb-3 text-6C5B7B">
+                Professional Makeup
+              </h3>
+              <p class="text-gray-700 leading-relaxed mb-6">
+                From subtle day looks to glamorous evening transformations, our
+                artists create your perfect look.
+              </p>
+              <a
+                href="#"
+                class="text-yellow-400 font-medium hover:underline flex items-center justify-center"
+              >
+                Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+              </a>
+            </div>
+
+            <!-- Service Card 5: Body Treatments -->
+            <div
+              class="bg-blue-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2"
+            >
+              <i class="fas fa-hands-helping text-blue-400 text-5xl mb-6"></i>
+              <h3 class="text-2xl font-semibold mb-3 text-6C5B7B">
+                Body & Spa Treatments
+              </h3>
+              <p class="text-gray-700 leading-relaxed mb-6">
+                Indulge in relaxing massages, body wraps, and other spa services
+                for ultimate tranquility.
+              </p>
+              <a
+                href="#"
+                class="text-blue-400 font-medium hover:underline flex items-center justify-center"
+              >
+                Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+              </a>
+            </div>
+
+            <!-- Service Card 6: Bridal Packages -->
+            <div
+              class="bg-red-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2"
+            >
+              <i class="fas fa-ring text-red-400 text-5xl mb-6"></i>
+              <h3 class="text-2xl font-semibold mb-3 text-6C5B7B">
+                Bridal Beauty Packages
+              </h3>
+              <p class="text-gray-700 leading-relaxed mb-6">
+                Look absolutely stunning on your special day with our
+                comprehensive bridal beauty packages.
+              </p>
+              <a
+                href="#"
+                class="text-red-400 font-medium hover:underline flex items-center justify-center"
+              >
+                Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section
+        class="py-20 bg-F9EBEA mx-auto max-w-7xl my-16 rounded-lg shadow-inner px-6"
+      >
+        <div class="container mx-auto text-center">
+          <h2 class="text-4xl font-bold mb-4 text-6C5B7B">
+            What Our Clients Say
+          </h2>
+          <p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
+            Hear from the girls who love their Glow & Bloom experience!
+          </p>
+
+          <!-- Testimonial Grid - Replaced Carousel -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Testimonial Item 1 -->
+            <div
+              class="bg-white p-8 rounded-xl shadow-lg testimonial-card flex-shrink-0"
+            >
+              <div class="flex justify-center mb-4">
+                <img
+                  src="https://placehold.co/80x80/6C5B7B/FFFFFF?text=A"
+                  alt="Client Avatar"
+                  class="w-20 h-20 rounded-full object-cover border-4 border-pink-200 shadow-md"
+                />
+              </div>
+              <p class="text-gray-800 text-lg italic mb-4">
+                "Glow & Bloom is my absolute favorite! The nail art is
+                incredible, and the staff are so sweet and professional. Always
+                leave feeling fabulous!"
+              </p>
+              <div class="text-yellow-500 mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <p class="font-semibold text-6C5B7B">- Anya Sharma</p>
+              <p class="text-sm text-gray-500">Regular Client</p>
+            </div>
+
+            <!-- Testimonial Item 2 -->
+            <div
+              class="bg-white p-8 rounded-xl shadow-lg testimonial-card flex-shrink-0"
+            >
+              <div class="flex justify-center mb-4">
+                <img
+                  src="https://placehold.co/80x80/6C5B7B/FFFFFF?text=B"
+                  alt="Client Avatar"
+                  class="w-20 h-20 rounded-full object-cover border-4 border-pink-200 shadow-md"
+                />
+              </div>
+              <p class="text-gray-800 text-lg italic mb-4">
+                "Got my bridal makeup done here, and it was perfect! They
+                understood exactly what I wanted and made me look stunning on my
+                big day."
+              </p>
+              <div class="text-yellow-500 mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i>
+              </div>
+              <p class="font-semibold text-6C5B7B">- Priya Singh</p>
+              <p class="text-sm text-gray-500">Happy Bride</p>
+            </div>
+
+            <!-- Testimonial Item 3 -->
+            <div
+              class="bg-white p-8 rounded-xl shadow-lg testimonial-card flex-shrink-0"
+            >
+              <div class="flex justify-center mb-4">
+                <img
+                  src="https://placehold.co/80x80/6C5B7B/FFFFFF?text=C"
+                  alt="Client Avatar"
+                  class="w-20 h-20 rounded-full object-cover border-4 border-pink-200 shadow-md"
+                />
+              </div>
+              <p class="text-gray-800 text-lg italic mb-4">
+                "The facial left my skin glowing and feeling so soft. The
+                ambiance is so relaxing, it's truly a peaceful escape."
+              </p>
+              <div class="text-yellow-500 mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <p class="font-semibold text-6C5B7B">- Diya Patel</p>
+              <p class="text-sm text-gray-500">Skincare Enthusiast</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us Section -->
+      <section
+        class="py-20 bg-white mx-auto max-w-7xl my-16 rounded-lg shadow-inner px-6"
+      >
+        <div class="container mx-auto text-center">
+          <h2 class="text-4xl font-bold mb-4 text-6C5B7B">
+            Why Choose Glow & Bloom?
+          </h2>
+          <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+            We are dedicated to providing an unparalleled beauty experience,
+            ensuring you leave feeling refreshed and beautiful.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Feature 1 -->
+            <div
+              class="flex flex-col items-center p-6 rounded-xl bg-gradient-to-br from-pink-50 to-white shadow-md"
+            >
+              <i class="fas fa-award text-pink-400 text-5xl mb-4"></i>
+              <h3 class="text-xl font-semibold mb-2 text-6C5B7B">
+                Expert Professionals
+              </h3>
+              <p class="text-gray-700 text-center">
+                Our team consists of highly skilled and certified beauty
+                experts.
+              </p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div
+              class="flex flex-col items-center p-6 rounded-xl bg-gradient-to-br from-purple-50 to-white shadow-md"
+            >
+              <i class="fas fa-spa text-purple-400 text-5xl mb-4"></i>
+              <h3 class="text-xl font-semibold mb-2 text-6C5B7B">
+                Luxurious Ambiance
+              </h3>
+              <p class="text-gray-700 text-center">
+                Relax in our serene and elegantly designed salon environment.
+              </p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div
+              class="flex flex-col items-center p-6 rounded-xl bg-gradient-to-br from-green-50 to-white shadow-md"
+            >
+              <i class="fas fa-heart text-green-400 text-5xl mb-4"></i>
+              <h3 class="text-xl font-semibold mb-2 text-6C5B7B">
+                Personalized Care
+              </h3>
+              <p class="text-gray-700 text-center">
+                Tailored consultations and treatments to meet your unique needs.
+              </p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div
+              class="flex flex-col items-center p-6 rounded-xl bg-gradient-to-br from-yellow-50 to-white shadow-md"
+            >
+              <i class="fas fa-shield-alt text-yellow-400 text-5xl mb-4"></i>
+              <h3 class="text-xl font-semibold mb-2 text-6C5B7B">
+                Hygiene & Safety
+              </h3>
+              <p class="text-gray-700 text-center">
+                Adhering to the highest standards of cleanliness and client
+                safety.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action Banner -->
+      <section
+        class="bg-6C5B7B text-white py-16 mx-auto max-w-7xl my-16 rounded-lg shadow-xl text-center px-6"
+      >
+        <h2 class="text-4xl font-bold mb-6">Ready to Glow?</h2>
+        <p class="text-xl mb-10 max-w-3xl mx-auto text-gray-700">
+          Book your appointment today and embark on your journey to ultimate
+          beauty and relaxation.
+        </p>
+        <a
+          href="#"
+          class="btn-primary bg-pink-400 text-white px-10 py-5 rounded-full text-2xl font-bold shadow-lg hover:bg-pink-500 transition duration-300 transform hover:scale-105"
+        >
+          Schedule Your Visit Now!
+        </a>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="bg-gray-800 text-gray-300 py-12 rounded-t-lg mx-auto max-w-7xl mb-4 px-6"
+    >
+      <div
+        class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left"
+      >
+        <!-- About -->
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-white">Glow & Bloom</h3>
+          <p
+            class="text-gray-400 leading-relaxed max-w-sm md:max-w-none mx-auto md:mx-0"
+          >
+            Your premier destination for luxury beauty treatments. We believe
+            every girl deserves to shine.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-white">Quick Links</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="#" class="hover:text-pink-400 transition duration-300"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pink-400 transition duration-300"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pink-400 transition duration-300"
+                >Packages</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-pink-400 transition duration-300"
+                >Privacy Policy</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Info & Social -->
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-white">Contact Us</h3>
+          <p class="mb-2">
+            <i class="fas fa-map-marker-alt mr-2 text-pink-400"></i>123 Beauty
+            Lane, Glamour City, GB 12345
+          </p>
+          <p class="mb-2">
+            <i class="fas fa-phone mr-2 text-pink-400"></i>+1 (555) 123-4567
+          </p>
+          <p class="mb-4">
+            <i class="fas fa-envelope mr-2 text-pink-400"></i
+            >info@glowandbloom.com
+          </p>
+          <div class="flex justify-center md:justify-start space-x-4 text-2xl">
+            <a href="#" class="hover:text-pink-400 transition duration-300"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" class="hover:text-pink-400 transition duration-300"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="hover:text-pink-400 transition duration-300"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500 text-sm"
+      >
+        &copy; 2023 Glow & Bloom. All rights reserved.
+      </div>
+    </footer>
+
+    <script>
+      // Mobile Menu Toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileServicesToggle = document.getElementById(
+        "mobile-services-toggle"
+      );
+      const mobileServicesMenu = document.getElementById(
+        "mobile-services-menu"
+      );
+
+      if (mobileMenuButton) {
+        mobileMenuButton.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+
+      if (mobileServicesToggle) {
+        mobileServicesToggle.addEventListener("click", () => {
+          mobileServicesMenu.classList.toggle("hidden");
+        });
+      }
+    </script>
+  </body>
+</html>
