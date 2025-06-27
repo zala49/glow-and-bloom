@@ -2,30 +2,23 @@ import { Award, Sparkles, Heart, Shield } from "lucide-react"
 
 const features = [
   {
-    icon: Award,
-    title: "Expert Professionals",
-    description: "Our team consists of highly skilled and certified beauty experts.",
-    bgColor: "bg-gradient-to-br from-pink-50 to-white",
-    iconColor: "text-pink-400",
-  },
-  {
     icon: Sparkles,
-    title: "Luxurious Ambiance",
-    description: "Relax in our serene and elegantly designed salon environment.",
+    title: "Comfortable Place",
+    description: "Our place is a calm and nice place where you can relax and feel good.",
     bgColor: "bg-gradient-to-br from-purple-50 to-white",
     iconColor: "text-purple-400",
   },
   {
     icon: Heart,
-    title: "Personalized Care",
-    description: "Tailored consultations and treatments to meet your unique needs.",
+    title: "Care Just for You",
+    description: "We talk with you to understand what you need, so every service is perfect for you.",
     bgColor: "bg-gradient-to-br from-green-50 to-white",
     iconColor: "text-green-400",
   },
   {
     icon: Shield,
-    title: "Hygiene & Safety",
-    description: "Adhering to the highest standards of cleanliness and client safety.",
+    title: "Clean & Safe",
+    description: "Your safety is important. We follow top rules for cleanliness and safety.",
     bgColor: "bg-gradient-to-br from-yellow-50 to-white",
     iconColor: "text-yellow-400",
   },
@@ -37,8 +30,7 @@ export default function WhyChooseUs() {
       <div className="container mx-auto text-center">
         <h2 className="text-4xl font-bold mb-4 text-purple-800">Why Choose Glow & Bloom?</h2>
         <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
-          We are dedicated to providing an unparalleled beauty experience, ensuring you leave feeling refreshed and
-          beautiful.
+          Come to Glow & Bloom because we promise you a great beauty experience. You'll always leave feeling good and looking amazing!
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

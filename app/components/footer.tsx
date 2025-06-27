@@ -7,9 +7,6 @@ export default function Footer() {
         {/* About */}
         <div>
           <h3 className="text-xl font-bold mb-4 text-white">Glow & Bloom</h3>
-          <p className="text-gray-400 leading-relaxed max-w-sm md:max-w-none mx-auto md:mx-0">
-            Your premier destination for luxury beauty treatments. We believe every girl deserves to shine.
-          </p>
         </div>
 
         {/* Quick Links */}
@@ -45,33 +42,27 @@ export default function Footer() {
           <div className="space-y-2 mb-4">
             <p className="flex items-center justify-center md:justify-start">
               <MapPin className="mr-2 text-pink-400" size={16} />
-              123 Beauty Lane, Glamour City, GB 12345
+              Mahemdavad
             </p>
             <p className="flex items-center justify-center md:justify-start">
               <Phone className="mr-2 text-pink-400" size={16} />
-              +1 (555) 123-4567
+              +91-8780997394
             </p>
             <p className="flex items-center justify-center md:justify-start">
               <Mail className="mr-2 text-pink-400" size={16} />
-              info@glowandbloom.com
+              zalapayal960@gmail.com
             </p>
           </div>
           <div className="flex justify-center md:justify-start space-x-4 text-2xl">
-            <a href="#" className="hover:text-pink-400 transition duration-300">
-              <Facebook size={24} />
-            </a>
-            <a href="#" className="hover:text-pink-400 transition duration-300">
+            <a href="https://www.instagram.com/payu_49/" target="_blank" className="hover:text-pink-400 transition duration-300">
               <Instagram size={24} />
-            </a>
-            <a href="#" className="hover:text-pink-400 transition duration-300">
-              <Twitter size={24} />
             </a>
           </div>
         </div>
       </div>
-      <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500 text-sm">
+      {/* <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500 text-sm">
         &copy; 2023 Glow & Bloom. All rights reserved.
-      </div>
+      </div> */}
     </footer>
   )
 }

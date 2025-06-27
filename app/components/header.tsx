@@ -58,11 +58,6 @@ export default function Header() {
             </ul>
           </li>
           <li>
-            <a href="#testimonials" className="text-gray-700 hover:text-pink-400 transition duration-300">
-              Testimonials
-            </a>
-          </li>
-          <li>
             <a href="#why-choose-us" className="text-gray-700 hover:text-pink-400 transition duration-300">
               Why Choose Us
             </a>
