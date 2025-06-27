@@ -19,11 +19,11 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-white/80 to-white/50"></div>
         <div className="relative z-10 max-w-4xl px-4">
           <h1 className="text-5xl md:text-7xl font-extrabold leading-tight text-purple-800 mb-6 animate-fade-in-down">
-            <span className="block">Unleash Your Inner Radiance</span>
+            <span className="block">Get Your Glow On!</span>
             <span className="block text-pink-400 text-4xl md:text-6xl mt-2 italic">At Glow & Bloom</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-800 mb-10 leading-relaxed animate-fade-in-up">
-            Discover a world of beauty, relaxation, and personalized care designed just for you.
+          Come on in! We're here to help you look and feel your best, just for you.
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <button

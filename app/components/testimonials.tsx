@@ -6,21 +6,21 @@ const testimonials = [
     role: "Regular Client",
     avatar: "A",
     rating: 5,
-    text: "Glow & Bloom is my absolute favorite! The nail art is incredible, and the staff are so sweet and professional. Always leave feeling fabulous!",
+    text: "Glow & Bloom is the best! Their nail art is super good, and everyone working there is so nice. I always leave feeling amazing!",
   },
   {
-    name: "Priya Singh",
+    name: "Priya Patel",
     role: "Happy Bride",
     avatar: "P",
     rating: 4.5,
-    text: "Got my bridal makeup done here, and it was perfect! They understood exactly what I wanted and made me look stunning on my big day.",
+    text: "They did my wedding makeup, and it was just perfect! They knew exactly what I wanted and made me look beautiful for my special day.",
   },
   {
     name: "Diya Patel",
     role: "Skincare Enthusiast",
     avatar: "D",
     rating: 5,
-    text: "The facial left my skin glowing and feeling so soft. The ambiance is so relaxing, it's truly a peaceful escape.",
+    text: "This facial made my skin glow and feel super soft. It's such a peaceful and relaxing place to visit. ",
   },
 ]
 
@@ -59,9 +59,9 @@ export default function Testimonials() {
                 </div>
               </div>
               <p className="text-gray-800 text-lg italic mb-4">"{testimonial.text}"</p>
-              <StarRating rating={testimonial.rating} />
               <p className="font-semibold text-purple-800">- {testimonial.name}</p>
               <p className="text-sm text-gray-500">{testimonial.role}</p>
+              <StarRating rating={testimonial.rating} />
             </div>
           ))}
         </div>
